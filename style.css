@@ -24,8 +24,16 @@
     height:100px;
 }
 .yazi_1{
+    background: rgb(34, 207, 213);
+    height: 70px;
     display: flex;
     justify-content: center;
+    opacity: 0;
+}
+.open-1_1{
+    height: 50px;
+    width: 50px;
+    background-color: red;
 }
 .yazi_3{
     display: flex;
