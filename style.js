@@ -73,3 +73,12 @@ function mouseOut() {
      }
 }
  */
+window.onscroll = function(){
+ 
+    var scrollTop = window.pageYOffset;
+    console.log(scrollTop);
+   if(scrollTop >259){
+    document.getElementById('about').style.transform = "translateY(-61px)";
+   }
+    
+  }
