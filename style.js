@@ -78,20 +78,23 @@ let scrollkontrol=1;
 let kayma=0;
 let sctrigger=document.querySelectorAll(".trigger");
 let sctriggervalue=0;
+let triggeractive=false;
 console.log(sctrigger);
 function MyFadeFunction(/* sctriggervalue */) {
-
+    triggeractive=true;
     if (opacity<1 ) {
        opacity += .1;
        
        setTimeout(function(){MyFadeFunction()},50);
 
     }
+    else if(opacity>1){
+        triggeractive=false;
+    }
    
         sctrigger[sctriggervalue].style.opacity = opacity;
   
     
-   
   
  }
 
@@ -107,38 +110,43 @@ function kaymaf(){
 
 
 window.onscroll = function(){
-  
     let scrollTop = window.pageYOffset;
-    console.log(scrollTop);
-   if(scrollTop >300 & scrollTop <699 & scrollkontrol==1 ){
-    scrollkontrol+=1;
-    sctriggervalue=0;
-    opacity=0;
-    kayma=0;
-    kaymaf();
-    MyFadeFunction();
-    
-   }
-  
-  if(scrollTop >700 & scrollTop <999 & scrollkontrol==2 ){
-    scrollkontrol+=1;
-    sctriggervalue=1;
-    console.log("filan");
-    opacity=0;
-    kayma=0;
-    kaymaf();
-    MyFadeFunction();
-    
-   }
-   if(scrollTop >1000  & scrollkontrol==3 ){
-    scrollkontrol+=1;
-    sctriggervalue=2;
-    opacity=0;
-    kayma=0;
-    kaymaf();
-    MyFadeFunction(/* 1 */);
-    
-   }
+        console.log(scrollTop);
+        console.log(triggeractive);
+    if(triggeractive==false)
+    {
+        console.log(triggeractive);
+       if(scrollTop >300 & scrollTop <699 & scrollkontrol==1 ){
+        scrollkontrol+=1;
+        sctriggervalue=0;
+        opacity=0;
+        kayma=0;
+        kaymaf();
+        MyFadeFunction();
+        
+       }
+      
+      if(scrollTop >700 & scrollTop <999 & scrollkontrol==2 ){
+        scrollkontrol+=1;
+        sctriggervalue=1;
+        console.log("filan");
+        opacity=0;
+        kayma=0;
+        kaymaf();
+        MyFadeFunction();
+        
+       }
+       if(scrollTop >1000  & scrollkontrol==3 ){
+        scrollkontrol+=1;
+        sctriggervalue=2;
+        opacity=0;
+        kayma=0;
+        kaymaf();
+        MyFadeFunction(/* 1 */);
+        
+       }
+    }
+   
 
     
   }
