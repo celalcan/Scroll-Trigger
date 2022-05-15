@@ -73,12 +73,39 @@ function mouseOut() {
      }
 }
  */
+let opacity = 0;
+let scrollkontrol=1;
 window.onscroll = function(){
- 
+  
     var scrollTop = window.pageYOffset;
     console.log(scrollTop);
-   if(scrollTop >259){
-    document.getElementById('about').style.transform = "translateY(-61px)";
+   if(scrollTop >350 & scrollkontrol==1 ){
+    scrollkontrol+=1;
+    opacity=0;
+    kayma=0;
+    kaymaf();
+    MyFadeFunction();
+    function MyFadeFunction() {
+
+        if (opacity<1 ) {
+           opacity += .1;
+           
+           setTimeout(function(){MyFadeFunction()},50);
+        }
+        document.getElementById('about').style.opacity = opacity;
+      
+     }
+    
+    function kaymaf(){
+        kayma+=1;
+        if(kayma<40){
+        setTimeout(function(){kaymaf()},8);
+             
+         } 
+        
+         document.getElementById('about').style.transform = "translateY(-"+kayma+"px)";
+       
+    }
    }
     
   }
