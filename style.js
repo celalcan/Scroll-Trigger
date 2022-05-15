@@ -75,41 +75,68 @@ function mouseOut() {
  */
 let opacity = 0;
 let scrollkontrol=1;
-
-
-function MyFadeFunction() {
+let kayma=0;
+let sctrigger=document.querySelectorAll(".trigger");
+let sctriggervalue=0;
+console.log(sctrigger);
+function MyFadeFunction(/* sctriggervalue */) {
 
     if (opacity<1 ) {
        opacity += .1;
        
        setTimeout(function(){MyFadeFunction()},50);
+
     }
-    document.getElementById('sctrigger').style.opacity = opacity;
+   
+        sctrigger[sctriggervalue].style.opacity = opacity;
+  
+    
+   
   
  }
 
 function kaymaf(){
     kayma+=1;
-    if(kayma<40){
+    if(kayma<60){
     setTimeout(function(){kaymaf()},8);
          
      } 
-    
-     document.getElementById('sctrigger').style.transform = "translateY(-"+kayma+"px)";
+    sctrigger[sctriggervalue].style.transform = "translateY(-"+kayma+"px)";
    
 }
 
 
 window.onscroll = function(){
   
-    var scrollTop = window.pageYOffset;
+    let scrollTop = window.pageYOffset;
     console.log(scrollTop);
-   if(scrollTop >300 & scrollkontrol==1 ){
+   if(scrollTop >300 & scrollTop <699 & scrollkontrol==1 ){
     scrollkontrol+=1;
+    sctriggervalue=0;
     opacity=0;
     kayma=0;
     kaymaf();
     MyFadeFunction();
+    
+   }
+  
+  if(scrollTop >700 & scrollTop <999 & scrollkontrol==2 ){
+    scrollkontrol+=1;
+    sctriggervalue=1;
+    console.log("filan");
+    opacity=0;
+    kayma=0;
+    kaymaf();
+    MyFadeFunction();
+    
+   }
+   if(scrollTop >1000  & scrollkontrol==3 ){
+    scrollkontrol+=1;
+    sctriggervalue=2;
+    opacity=0;
+    kayma=0;
+    kaymaf();
+    MyFadeFunction(/* 1 */);
     
    }
 
