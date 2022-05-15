@@ -75,37 +75,43 @@ function mouseOut() {
  */
 let opacity = 0;
 let scrollkontrol=1;
+
+
+function MyFadeFunction() {
+
+    if (opacity<1 ) {
+       opacity += .1;
+       
+       setTimeout(function(){MyFadeFunction()},50);
+    }
+    document.getElementById('sctrigger').style.opacity = opacity;
+  
+ }
+
+function kaymaf(){
+    kayma+=1;
+    if(kayma<40){
+    setTimeout(function(){kaymaf()},8);
+         
+     } 
+    
+     document.getElementById('sctrigger').style.transform = "translateY(-"+kayma+"px)";
+   
+}
+
+
 window.onscroll = function(){
   
     var scrollTop = window.pageYOffset;
     console.log(scrollTop);
-   if(scrollTop >350 & scrollkontrol==1 ){
+   if(scrollTop >300 & scrollkontrol==1 ){
     scrollkontrol+=1;
     opacity=0;
     kayma=0;
     kaymaf();
     MyFadeFunction();
-    function MyFadeFunction() {
-
-        if (opacity<1 ) {
-           opacity += .1;
-           
-           setTimeout(function(){MyFadeFunction()},50);
-        }
-        document.getElementById('about').style.opacity = opacity;
-      
-     }
     
-    function kaymaf(){
-        kayma+=1;
-        if(kayma<40){
-        setTimeout(function(){kaymaf()},8);
-             
-         } 
-        
-         document.getElementById('about').style.transform = "translateY(-"+kayma+"px)";
-       
-    }
    }
+
     
   }
