@@ -29,6 +29,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    max-width: 798px;
     width: 798px;
     height: 223px;
     margin-top:112px;
