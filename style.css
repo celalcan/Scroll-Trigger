@@ -29,7 +29,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    max-width: 798px;
+    max-width: 100vw;
     width: 798px;
     height: 223px;
     margin-top:112px;
@@ -57,8 +57,24 @@ color: #FFFFFF;
     justify-content: center;
     opacity: 0;
 } */
-/* .yazi_1:hover{
+.trigger:hover{
     transition: all 0.2s ease-in-out 0s;
-   color: black;
+   background-color: black;
+}
+/* 
+@media (max-width: 768px) {
+
+    .trigger{
+        background-color: #0E74E8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        max-width: 500px;
+        width: 500px;
+        height: 223px;
+        margin-top:112px;
+        opacity: 0;
+    }
 } */
 
