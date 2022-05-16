@@ -79,33 +79,27 @@ let kayma=0;
 let sctrigger=document.querySelectorAll(".trigger");
 let sctriggervalue=0;
 let triggeractive=false;
+
 console.log(sctrigger);
 function MyFadeFunction(/* sctriggervalue */) {
     triggeractive=true;
     if (opacity<1 ) {
        opacity += .1;
-       
        setTimeout(function(){MyFadeFunction()},50);
-
     }
     else if(opacity>1){
         triggeractive=false;
-    }
-   
+    }  
         sctrigger[sctriggervalue].style.opacity = opacity;
-  
-    
-  
  }
+
 
 function kaymaf(){
     kayma+=1;
     if(kayma<60){
-    setTimeout(function(){kaymaf()},8);
-         
+    setTimeout(function(){kaymaf()},8);       
      } 
     sctrigger[sctriggervalue].style.transform = "translateY(-"+kayma+"px)";
-   
 }
 
 
@@ -123,7 +117,6 @@ window.onscroll = function(){
         kayma=0;
         kaymaf();
         MyFadeFunction();
-        
        }
       
       if(scrollTop >700 & scrollTop <999 & scrollkontrol==2 ){
@@ -146,7 +139,4 @@ window.onscroll = function(){
         
        }
     }
-   
-
-    
   }
