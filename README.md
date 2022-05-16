@@ -1,3 +1,3 @@
-<div style="padding:62.5% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/710561627?h=a08dac4157&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="New Recording - 17.05.2022 01:12:21"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+[![Watch the video](https://user-images.githubusercontent.com/10493342/168532022-31c9e62c-f820-4f76-9401-fa17dc57e20a.jpg)](https://vimeo.com/710561627/a08dac4157)
 ![scrolltrigger_insta_1](https://user-images.githubusercontent.com/10493342/168532022-31c9e62c-f820-4f76-9401-fa17dc57e20a.jpg)
 ![scrolltrigger_insta_2](https://user-images.githubusercontent.com/10493342/168532028-32eb8a80-416e-4149-922d-98acfde1220f.jpg)
